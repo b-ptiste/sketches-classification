@@ -80,7 +80,7 @@ class EfficientNet(torch.nn.Module):
 
 class Vit(torch.nn.Module):
     def __init__(self, model_name, cfg):
-        super(Timm, self).__init__()
+        super(Vit, self).__init__()
         self.model_name = model_name
         self.model = timm.create_model(
             model_name,
