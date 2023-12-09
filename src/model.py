@@ -16,9 +16,9 @@ from torchvision.models import (
 
 
 class Resnet(torch.nn.Module):
-    def __init__(self, model_name, cfg, with_freeze=None):
+    def __init__(self, cfg, with_freeze=None):
         super(Resnet, self).__init__()
-        self.model_name = model_name
+        self.model_name = cfg["model_name"]
 
         if self.model_name == "resnet18":
             model = resnet18(pretrained=True)
@@ -62,11 +62,11 @@ class Resnet(torch.nn.Module):
 
 
 class EfficientNet(torch.nn.Module):
-    def __init__(self, model_name, cfg):
+    def __init__(self, cfg):
         super(EfficientNet, self).__init__()
-        self.model_name = model_name
+        self.model_name = cfg["model_name"]
         self.model = timm.create_model(
-            model_name,
+            self.model_name,
             pretrained=True,
             num_classes=250,
             drop_rate=cfg["drop_rate"],
@@ -79,11 +79,11 @@ class EfficientNet(torch.nn.Module):
 
 
 class Vit(torch.nn.Module):
-    def __init__(self, model_name, cfg):
+    def __init__(self, cfg):
         super(Vit, self).__init__()
-        self.model_name = model_name
+        self.model_name = cfg["model_name"]
         self.model = timm.create_model(
-            model_name,
+            self.model_name,
             pretrained=True,
             num_classes=250,
             drop_rate=cfg["drop_rate"],
