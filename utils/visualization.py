@@ -45,7 +45,7 @@ def pplot_exemple(cfg, transforms_train):
 
     # get some random training images
     dataiter = iter(data_loader)
-    images, labels = next(dataiter)
+    images, _ = next(dataiter)
 
     # show images
     plt.figure(figsize=(20, 25))
