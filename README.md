@@ -1,7 +1,7 @@
 # sketches-classification
 
 This project was carried out as part of the **Reconnaissance d'objets et vision artificielle (RecVis)** - Master M2 MVA
-Lecturers: Gül Varol(), Jean Ponce, Armand Joulin, Josef Sivic, Ivan Laptev, Cordelia Schmid, and Mathieu Aubry
+Lecturers: Gül Varol, Jean Ponce, Armand Joulin, Josef Sivic, Ivan Laptev, Cordelia Schmid, and Mathieu Aubry
 
 **Kaggle (rank 4/59)** : https://www.kaggle.com/competitions/mva-recvis-2023/leaderboard
 
